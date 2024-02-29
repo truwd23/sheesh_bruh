@@ -30,8 +30,8 @@ elif selected_tab == "Data Mining":
     st.subheader("Multiple Linear Regression for Data Mining")
 
     # Assume the last column is the target variable and the rest are features
-    X = existing_data.drop(columns=['harga'])
-    y = existing_data['harga']
+    X = existing_data.drop(columns=['price'])
+    y = existing_data['price']
 
     # Split the data into training and testing sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
