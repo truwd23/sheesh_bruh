@@ -16,10 +16,6 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 existing_data = conn.read(worksheet="Data", usecols=list(range(20)), ttl=5)
 existing_data = existing_data.dropna(how="all")
 
-# Remove irrelevant columns
-columns_to_remove = ['id', 'name', 'description', 'number']
-existing_data = existing_data.drop(columns=columns_to_remove, errors='ignore')
-
 # Map values in 'jenis' column
 existing_data['jenis'] = existing_data['jenis'].map({'Putra': 1, 'Putri': 2, 'Campur': 3})
 
@@ -39,6 +35,10 @@ if selected_tab == "Vendor Details":
     st.dataframe(existing_data)
 elif selected_tab == "Data Mining":
     st.subheader("Multiple Linear Regression for Data Mining")
+
+    # Remove irrelevant columns
+    columns_to_remove = ['id', 'name', 'description', 'number']
+    existing_data = existing_data.drop(columns=columns_to_remove, errors='ignore')
 
     # Assume the last column is the target variable and the rest are features
     X = existing_data.drop(columns=['price'])
