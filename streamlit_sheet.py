@@ -31,7 +31,7 @@ for column in columns_to_map:
 st.sidebar.title("Data Mining")
 selected_tab = st.sidebar.selectbox("Choose an option", ["Vendor Details", "Data Mining"])
 
-if selected_tab == "Vendor Details":
+if selected_tab == "Data Spreadsheet":
     st.dataframe(existing_data)
 elif selected_tab == "Data Mining":
     st.subheader("Multiple Linear Regression for Data Mining")
