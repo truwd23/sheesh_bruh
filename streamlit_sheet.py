@@ -20,6 +20,9 @@ existing_data = existing_data.dropna(how="all")
 columns_to_remove = ['id', 'name', 'description', 'number']
 existing_data = existing_data.drop(columns=columns_to_remove, errors='ignore')
 
+# Map values in 'jenis' column
+existing_data['jenis'] = existing_data['jenis'].map({'Putra': 1, 'Putri': 2, 'Campur': 3})
+
 # Sidebar for Data Mining
 st.sidebar.title("Data Mining")
 selected_tab = st.sidebar.selectbox("Choose an option", ["Vendor Details", "Data Mining"])
