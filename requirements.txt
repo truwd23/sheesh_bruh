@@ -3,5 +3,5 @@
 streamlit
 git+https://github.com/streamlit/gsheets-connection
 scikit-learn
-pandas==2.2.1
+pandas
 pandasql  # this is for example/st_app.py only
