@@ -6,8 +6,8 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 
 # Display Title and Description
-st.title("Vendor Management Portal")
-st.markdown("Enter the details of the new vendor below.")
+st.title("Data Baru dari Spreadsheet")
+st.markdown("Data dibawah ini berasal dari pemilik kos yang terhubung ke spreadsheet.")
 
 # Establishing a Google Sheets connection
 conn = st.connection("gsheets", type=GSheetsConnection)
