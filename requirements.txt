@@ -5,10 +5,3 @@ git+https://github.com/streamlit/gsheets-connection
 scikit-learn
 pandas==2.1.4
 pandasql  # this is for example/st_app.py only
-numpy==1.26.2
-seaborn==0.13.0
-matplotlib==3.8.2
-plotly==5.18.0
-pandas==2.1.4
-joblib==1.3.2
-Pillow
