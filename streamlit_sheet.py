@@ -23,6 +23,14 @@ existing_data = existing_data.drop(columns=columns_to_remove, errors='ignore')
 # Map values in 'jenis' column
 existing_data['jenis'] = existing_data['jenis'].map({'Putra': 1, 'Putri': 2, 'Campur': 3})
 
+# Map values in specified columns
+columns_to_map = ['listrik', 'akseskos', 'ac', 'kasur', 'kamarmandidalam', 'klosetduduk', 
+                  'penjagakos', 'penguruskos', 'cctv', 'wifi', 'ibadah', 'bank', 'rumahsakit', 
+                  'universitas']
+
+for column in columns_to_map:
+    existing_data[column] = existing_data[column].map({'Ada': 1, 'Tidak ada': 0})
+
 # Sidebar for Data Mining
 st.sidebar.title("Data Mining")
 selected_tab = st.sidebar.selectbox("Choose an option", ["Vendor Details", "Data Mining"])
