@@ -29,7 +29,7 @@ for column in columns_to_map:
 
 # Sidebar for Data Mining
 st.sidebar.title("Data Mining")
-selected_tab = st.sidebar.selectbox("Choose an option", ["Vendor Details", "Data Mining"])
+selected_tab = st.sidebar.selectbox("Choose an option", ["Data Spreadsheet", "Data Mining"])
 
 if selected_tab == "Data Spreadsheet":
     st.dataframe(existing_data)
